@@ -1,0 +1,23 @@
+ i:hover{
+    animation: rotate 1s infinite linear;
+    
+
+}
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{transform:rotate(360deg);}
+} 
+.nav{
+    -webkit-animation: rotation 1.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}

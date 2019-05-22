@@ -1,0 +1,7 @@
+.successmessage{
+  
+    background:#002f35;
+    box-shadow: 0.4rem 0.9rem 1.9rem 0.6rem rgba(76, 27, 116, 0.4);
+    padding:10px 0px 20px 0px;
+    border-radius:10px;
+}

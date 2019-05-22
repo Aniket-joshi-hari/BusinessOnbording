@@ -1,0 +1,193 @@
+/* 
+  .wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .payments{
+    width: 60%;
+    padding: 2%;
+    margin-left:33%;
+    border-right: 1px solid #fff;
+    background: #9D50BB;  
+    background: -webkit-linear-gradient(to top, #6E48AA, #9D50BB); 
+    background: linear-gradient(to top, #6E48AA, #9D50BB); 
+  }
+  
+  .payments_form, .refunds-form{
+    margin-top: 20%;
+    font-size: 140%;
+    
+  }
+  
+  .payments .payments_form input{
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 90%;
+    font-family: inherit;
+  }
+  
+  .payments .payments_form button{
+    border: 3px solid #fff;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 15px 50px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden; */
+  /* }
+  
+  button::after{
+    width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    background: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  button:hover, button:active{
+    color: #9D50BB;
+      background: #fff;  
+  }
+  
+  button:hover:after,
+  button:active:after {
+      width: 100%;
+  }
+  
+  .pay_amount, .refund_amount{
+    font-size: 140%;
+  }
+  
+  .refunds{
+    width: 50%;
+    padding: 2%;
+    float: left;
+    background: #9D50BB;
+    background: -webkit-linear-gradient(to top, #9D50BB, #6E48AA);
+    background: linear-gradient(to top, #9D50BB, #6E48AA);
+  } */
+  
+  @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+.contain-full{
+  width: 100%;
+}
+.contain{
+  /* width: fit-content; */
+  /* margin: 20px auto; */
+  /* position:relative; */
+
+}
+.column{
+  margin: 5px 5px;
+  width: calc(33% - 10px);
+  float:left;
+  background: white;
+  overflow:hidden;
+  transition-duration: .3s;
+  border-radius: 5px;
+  border:2px solid rgba(0,0,0,0.3);
+}
+.top{
+  width: 100%;
+  position:relative;
+  background:#8be275;
+  height: 100px;
+  padding-top:22px;
+  text-align:center;
+}
+.pro{
+  background:#75abe2;
+}
+.expert{
+  background: #a975e2;
+}
+.top h1{
+  width: fit-content;
+  margin: 0 auto;
+  color:white;
+  font-size: 2.5em;
+  padding-top: 10px;
+  text-shadow:0px 0px 20px #49566d;
+  cursor: default;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.center{
+  display:block;
+  position: relative;
+  margin: 20px 5px;
+}
+table{
+  width: 100%;
+  color:#656565;
+}
+.center table tr{
+  padding-bottom: 7px;
+  margin-top: 7px;
+  margin-bottom: 0;
+  border-bottom: 1px solid grey;
+}
+table tr td img{
+  width: 20px;
+  vertical-align: middle;
+}
+th,td{
+  vertical-align: middle;
+  text-align: left;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+}
+td:nth-child(2){
+  text-align:center;
+}
+th:nth-child(2){
+  text-align:center;
+}
+.button{
+  background: #ff7919;
+  margin: 7px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align:center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color:white;
+  cursor:pointer;
+  transition-duration: .1s;
+}
+.column:hover{
+  box-shadow: 0px 18px 26px 0px #3a3a3a;
+  transition-duration: .1s;
+  transform: scale(1.01,1.01) translate(0px,-10px)
+}
+.button:hover{
+  background:#e24e09b8;
+  transition-duration: .1s;
+  box-shadow: 0px 0px 18px 0px #a0a0a0;
+}

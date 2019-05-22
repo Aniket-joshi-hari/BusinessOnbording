@@ -1,0 +1,28 @@
+.locationPicker{
+    width:100%;
+    margin-top:3%;
+}
+
+
+   
+@media only screen and (max-width: 600px) {
+   
+}
+
+
+@media screen and (min-width: 991px) {
+    .locationPicker{
+        margin-left:25%;
+       width:75%;
+    }
+}
+
+
+@media screen and (min-width: 1170px) {
+
+.locationPicker{
+    width:79%;
+    margin-left:21%;
+}
+}
+ 

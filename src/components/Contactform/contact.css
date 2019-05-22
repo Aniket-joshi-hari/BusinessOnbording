@@ -1,0 +1,31 @@
+.form{
+ margin-left: 30%;
+ border:1px solid #ccc;
+ margin-top:40px;
+  padding:10px;
+ border-radius: 4px;
+}
+input:focus{
+    border-color:blue!important;
+}
+input:focus + label{
+    top:-10px !important;
+}
+textarea:focus{
+    border-color:blue !important;
+    transition:0.2s ease all;
+}
+
+
+@media screen and (max-width: 991px) {
+
+    .form{
+        margin-left: 10%;
+        border:1px solid #ccc;
+        margin-top:10px;
+           
+       }
+
+}
+
+
