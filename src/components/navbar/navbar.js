@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
 import classes from '../../App.css';
-
+import Animation from './navbar.css';
 import Typography from '@material-ui/core/Typography';
 
 const navbar = () => {
@@ -26,11 +26,13 @@ const navbar = () => {
              {/* <NavLink to ="/"  exact activeStyle={{ color: 'yellow',fontWeight:'bold' }}><Button color="inherit">Overview</Button></NavLink>
              <NavLink to ="/detail"  activeStyle={{color: 'yellow',fontWeight:'bold' }}><Button color="inherit">Details</Button></NavLink>
              <NavLink to ="/rack" activeStyle={{color: 'yellow',fontWeight:'bold' }}><Button color="inherit">Rack</Button></NavLink> */}
-             
-              <i className="fas fa-phone"></i>
+             <span className={Animation.leftNavbar}>
+              <i className="fas fa-phone"></i></span>
              <span>+91-7906361157</span>
              
-             <i className="fas fa-envelope"></i>
+             <span className={Animation.leftNavbar}>
+               <i className="fas fa-envelope"></i>
+                 </span>
             <span> zypher@gmail.com</span>
              </div>
              

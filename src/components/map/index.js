@@ -139,7 +139,7 @@ class Location extends Component {
             defaultPosition={this.state.position}
             onChange={this.handleLocationChange}
             zoom={10}
-            // zoom='400'
+            
           />
         </div>
             <br/>

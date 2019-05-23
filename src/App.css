@@ -1096,7 +1096,9 @@ fieldset[disabled]
   border: 0;
   padding: 0.5rem 0.7rem;
   background-color: transparent; }
-
+.active1{
+  background: #ffcfcf;
+}
 .btn-lg {
   font-size: 1em;
   border-radius: 0.25rem;
@@ -2919,7 +2921,7 @@ Created using IcoMoon - icomoon.io
       margin-top: 7px; }
     .sidebar .nav li > a,
     .off-canvas-sidebar .nav li > a {
-      margin: 10px 15px 0;
+      margin: 20px 0px 20px 0;
       border-radius: 30px;
       color: #FFFFFF;
       display: block;
@@ -2937,7 +2939,7 @@ Created using IcoMoon - icomoon.io
     .sidebar .nav li:focus:not(.active) > a,
     .off-canvas-sidebar .nav li:hover:not(.active) > a,
     .off-canvas-sidebar .nav li:focus:not(.active) > a {
-      background-color: rgba(255, 255, 255, 0.1); }
+      background-color: rgba(255, 255, 255, 0.2); }
       .sidebar .nav li:hover:not(.active) > a i,
       .sidebar .nav li:focus:not(.active) > a i,
       .off-canvas-sidebar .nav li:hover:not(.active) > a i,
@@ -2950,7 +2952,12 @@ Created using IcoMoon - icomoon.io
               box-shadow: 0 1px 15px 1px rgba(39, 39, 39, 0.1); 
               
              }
-              
+             .active {
+              background-color: rgba(255, 255, 255, 0.2) !important;
+             }
+             .sidebarNav{
+               margin:4px 0px 8px 0px;
+             }
     .sidebar .nav p,
     .off-canvas-sidebar .nav p {
       margin: 0;
