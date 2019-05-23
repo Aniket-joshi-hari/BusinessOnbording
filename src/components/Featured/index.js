@@ -22,7 +22,7 @@ const Featured = () => {
                     
                     
                     
-         <Link to="/detail">  <button style={{padding:'10px',marginTop:'10%'}} className="btn btn-block btn-primary ">
+         <Link to="/detail">  <button style={{padding:'10px',marginTop:'10%',position:'sticky'}} className="btn btn-block btn-primary ">
             
             Getting  Started
             </button></Link> 
