@@ -88,11 +88,7 @@ class Location extends Component {
       render(){
         console.log(this.state);
         
-        var fixtures = [
-          {label: 'Bangalore India', location: {lat: 12.9716, lng: 77.5946}},
-          {label: 'Reeperbahn, Hamburg', location: {lat: 12.9716, lng: 77.5946}},
-          {label: 'Alster, Hamburg', location: {lat: 12.9716, lng: 77.5946}}
-        ];
+       
     return (
         <div>
           <Container >
@@ -104,7 +100,7 @@ class Location extends Component {
           ref={el=>this._geoSuggest=el}
           placeholder="Search your place"
           initialValue=""    
-          fixtures={fixtures}
+          
           onSuggestSelect={this.onSuggestSelect}
           location={new google.maps.LatLng( this.state.position.Lat,this.state.position.Lng)}
              onChange={()=>this._geoSuggest.selectSuggest()} 
