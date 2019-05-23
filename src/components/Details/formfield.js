@@ -197,7 +197,7 @@ class Formfield extends Component {
   console.log(JSON.stringify(dataToSend));
   axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/registerInquiry', dataToSend)
           .then( response => {
-              console.log(response.data.cafeInquiry._id);
+              console.log(response);
              let cafeId=response.data.cafeInquiry._id;
               if(response.data.status === 1){
                 this.setState({
