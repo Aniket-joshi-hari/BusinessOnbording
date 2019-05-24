@@ -22,7 +22,13 @@ button{
 }
 
 
-
+.mainButton{
+  position: sticky;
+  position: -webkit-sticky;
+  top:48px;
+  z-index: 9999;
+  
+}
 .ui{
   width:30%;
   height:30px;

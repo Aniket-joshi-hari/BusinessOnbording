@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Sticky from 'react-sticky-el';
 import { Link } from 'react-router-dom';
+import classes from '../../App.css';
 
 console.log(this)
 class Featured extends Component{
@@ -23,11 +24,11 @@ class Featured extends Component{
         console.log(this.props.location.pathname);
    
     return (
-        <div style={{position:'relative'}}>
+        <div >
 
             <Carrousel/>
            
-            <Container>
+            <Container   className={classes.mainButton}>
 
                 <Row>
  

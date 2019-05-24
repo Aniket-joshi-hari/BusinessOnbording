@@ -27,13 +27,8 @@ class BootstrapSidebar extends Component  {
 
     }
 
-    
-   
-    
     render(){
    
-        
-
         const menu=(
             
             <div  >
