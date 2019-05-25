@@ -29,15 +29,26 @@ class Formfield extends Component {
         redirect: false,
         alert:false,
         cafeId:'',
+        buttonStyle:'block'
         
        
-       
-        
-
         
     };
+    componentDidMount(){
+        if(localStorage.getItem( "details" )){
+        const details= JSON.parse( localStorage.getItem( "details" ) );
+        this.setState( { 
+            firstName: details.firstName,
+            lastName: details.lastName,
+            BName : details.BName,
+            BType : details.Btype,
+            email: details.email,
+            phoneNumber : details.phoneNumber
+        } );
+    }
 
-   
+          
+      }
     validateUserInputs = () => {
 
         let formIsValid = true;
@@ -181,6 +192,25 @@ class Formfield extends Component {
     
     formsubmit=()=>{
         console.log(this.props.form);
+        this.setState({
+            buttonStyle:'none'
+        })
+
+        localStorage.setItem('details', JSON.stringify({firstName:this.state.firstName,lastName:this.state.lastName,BName:this.state.BName,BTyphe:this.state.BType,email:this.state.email,phoneNumber:this.state.phoneNumber}));
+        // const details = localStorage.getItem('details');
+        // this.setState({
+        //     firstName: details.firstName,
+        //     lastName: details.lastName,
+        //     BName : details.BName,
+        //     BType : details.BType,
+        //     email: details.email,
+        //     phoneNumber : details.phoneNumber,
+           
+        //    });
+
+           
+           
+
 //   let dataToSend={...this.props.form};
   let dataToSend = {
                
@@ -198,11 +228,13 @@ class Formfield extends Component {
   axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/registerInquiry', dataToSend)
           .then( response => {
               console.log(response);
+
              let cafeId=response.data.cafeInquiry._id;
               if(response.data.status === 1){
                 this.setState({
                     cafeId:cafeId,
-                    redirect : true
+                    redirect : true,
+                   
                 })
                 
                 console.log(this.state.cafeId)
@@ -413,7 +445,7 @@ class Formfield extends Component {
                                        <div>
                                            
                                     {this.renderRedirect()}
-                                        <div className={classes.formfieldButton}  
+                                        <div className={classes.formfieldButton}  style={{display:this.state.buttonStyle}}
                                         
                                          onClick= { (e) =>{
                                              

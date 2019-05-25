@@ -26,7 +26,11 @@ class BootstrapSidebar extends Component  {
            
 
     }
+    
+    activeClass =() =>{
 
+
+    }
     render(){
    
         const menu=(
@@ -53,8 +57,8 @@ class BootstrapSidebar extends Component  {
         <div className={classes.sidebar_wrapper} style={{marginTop:'55px'}}>
             <ul className={classes.nav}>
                 
-
-               
+               {this.props.location.path}
+               {this.activeClass()}
                 {menu}
 
 
