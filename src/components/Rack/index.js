@@ -12,6 +12,7 @@ import axios from "axios";
 class index extends Component {
   state = {
     redirect:false,
+    redirectF:false,
     selectedIndex: null,
     cardContent: [
       { id: "1", cardHeading: "20 Books", price: "50" ,col:'col-lg-4',card :'card mb-5 mb-lg-0',cardS:[classes.card],cardB:'card-body',cardH :'card-price text-center',ul:'fa-ul',span:'fa-li',check :'fas fa-check',button:'btn btn-block btn-primary text-uppercase',link:'/map',src: require('../../resources/img1.jpeg'),name:'rack1' },
@@ -48,6 +49,7 @@ class index extends Component {
 
   finalSubmit= (e) => {
     let cafeId = this.props.person.cafeId;
+    if(cafeId){
     const dataToSend={
       cafeId: cafeId,
       rack: this.state.selectedRack.rackId
@@ -65,6 +67,13 @@ axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/updateRack', 
             }
            
         } )
+      }
+      else{
+        this.setState({
+          redirectF:true
+        })
+        alert("Please fill the details form first");
+      }
   }
  
   renderRedirect = () => {
@@ -76,7 +85,18 @@ axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/updateRack', 
 
   }
 
+
+  renderRedirectF = () => {
+       
+    if (this.state.redirectF) {
+      return <Redirect to='/detail'  />
+
+    }
+
+  }
+
   render() {
+   
     console.log(this.props.person);
   const card = 
   // cardCss={card.cardS}
@@ -147,7 +167,7 @@ axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/updateRack', 
                 <section className={classes.pricing}>
   <div className="container">
     <div className="row">
-      
+    
         {card}
       
     </div>
@@ -166,6 +186,7 @@ axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/updateRack', 
               <Col lg={{span:6,offset:6}}>
                {/* <Link to="/payment"> */}
                {this.renderRedirect()}
+               {this.renderRedirectF() }
               <button   onClick={(e) => this.finalSubmit(e)}
               className={classes.rack_button} >
                Next 
@@ -180,6 +201,7 @@ axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/updateRack', 
             
             
       </div>
+    
     );
   }
 }

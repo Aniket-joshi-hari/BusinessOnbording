@@ -27,8 +27,7 @@ class App extends Component {
     console.log(amounT)
     console.log(cafeId);
     console.log(planId);
-  
-    
+  if(cafeId){   
     
     this.setState(
       {
@@ -90,7 +89,10 @@ class App extends Component {
     let rzp = new window.Razorpay(options);
     rzp.open();
    console.log(this.props.form);
-
+  }
+  else{
+    alert("you have not filled form details")
+  }
    
   }
 

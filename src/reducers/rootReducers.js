@@ -3,7 +3,8 @@ const initState = {
 	persons : {},
     rack : '',
     map : {},
-    ContactForm : {}
+    ContactForm : {},
+    
 }
 
 

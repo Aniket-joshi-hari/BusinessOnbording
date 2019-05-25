@@ -25,7 +25,8 @@ class Location extends Component {
            lat: 12.9279,
            lng: 77.6271
         },
-        redirectt : false
+        redirectt : false,
+        redirected:false
       };
 
       this.handleLocationChange = this.handleLocationChange.bind(this);
@@ -50,6 +51,7 @@ class Location extends Component {
     }
 
     submitMap = (e)=> {
+      if(this.props.form.cafeId){
       if(this.state.position.lat){
         let cafeId =this.props.form.cafeId;
         
@@ -60,7 +62,7 @@ class Location extends Component {
             lng:this.state.position.lng
         }
         }
-         
+        
         let dataToSend;
         axios.post( 'https://test-zypher.herokuapp.com/adminRoutes/inquiry/updateLocation', dataToSend)
         .then( response => {
@@ -78,7 +80,20 @@ class Location extends Component {
       
       }
     }
+    else{
 
+      this.setState({
+        redirected:true
+      })
+      alert("Please Fill Details page first");
+    }
+    }
+
+    renderRedirected = () => {
+      if (this.state.redirected) {
+        return <Redirect to='/detail'  />
+      }
+    }
 
     renderRedirect = () => {
       if (this.state.redirectt) {
@@ -118,6 +133,7 @@ class Location extends Component {
           <Container>
               <Row>
                 <Col md={{span:3,offset:4}} sm={{span: 4 ,offset:3}} xs={{span:6 ,offset:3 }} className="mt-3">
+              {this.renderRedirected()}
                {this.renderRedirect()}
              <button  onClick={ (e)=> this.submitMap(e)
             
